@@ -73,7 +73,7 @@ p {
 p strong {
 	font-weight: 800;
 }
-p .metorik {
+p .luna {
 	border-bottom: 2px solid #eee;
 	font-weight: 800;
 }
@@ -83,26 +83,6 @@ p.fix {
 	font-size: 28px;
 	font-weight: 800;
 	padding-right: 0;
-}
-
-.with-love {
-	font-size: 18px;
-	margin-top: 25px;
-}
-.with-love a {
-	color: #fff;
-	display: block;
-	font-size: 22px;
-	font-weight: bold;
-	margin-top: 18px;
-	text-decoration: none;
-}
-.with-love img {
-	border: 1px solid rgba(0, 0, 0, 0.5);
-	border-radius: 100%;
-	margin-right: 5px;
-	vertical-align: bottom;
-	width: 30px;
 }
 
 .features-list {
@@ -137,22 +117,38 @@ p.fix {
     /*Rotate the L 45 degrees to turn it into a checkmark*/
     transform: rotate(45deg);
 }
-
-.twitter-share {
-	background: #1da1f2;
-	border-radius: 3px;
-	color: #fff;
-	display: block;
-	font-weight: 500;
-	padding: 15px;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
+.cross {
+	display: inline-block;
+	height: 10px;
+	top: -4px;
+	position: relative;
 }
-.twitter-share .twitter {
-	fill: #fff;
-	margin-right: 3px;
-	width: 15px;
+.cross:before, .cross:after {
+    /*Add another block-level blank space*/
+    content: '';
+    display: block;
+ 
+    /*Make it a small rectangle so the border will create an L-shape*/
+    width: 5px;
+    height: 13px;
+ 
+    /*Add a white border on the bottom and left, creating that 'L' */
+    border: solid #e34f4f;
+    border-width: 0 3px 0px 0;
+
+    margin-right: 10px;
+	position: relative;
+}
+
+.cross:before {
+	/*Rotate the | 45 degrees to turn it into a cross*/
+    transform: rotate(45deg);
+	top: 2px;
+}
+.cross:after {
+	/*Rotate the | -45 degrees to turn it into a cross*/
+    transform: rotate(-45deg);
+	top: -9px;
 }
 
 form {
